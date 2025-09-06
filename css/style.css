@@ -1,0 +1,446 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #333;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.625rem;
+}
+
+.menu__logo {
+    display: flex;
+    align-items: cente;
+}
+
+.menu__logo-image {
+    width: 1.875rem;
+    height: auto;
+    margin-right: clamp(0.5rem, 0.475rem + 0.13vw, 0.625rem);
+    border-radius: 50%;
+}
+
+.menu__logo-text {
+    color: #fff;
+    font-size: clamp(0.5rem, 0.35rem + 0.75vw, 1.25rem);
+}
+
+.menu__list {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+
+.menu__item+.menu__item {
+    margin-left: clamp(0.94rem, 0.003rem + 4.69vw, 5.625rem);
+}
+
+.menu__link {
+    color: #FFF;
+    font-size: clamp(1rem, 0.975rem + 0.13vw, 1.125rem);
+    font-weight: 600;
+    line-height: 1rem;
+}
+
+.menu__social {
+    display: flex;
+    align-items: center;
+    padding-top: 0.3rem;
+}
+
+.menu__social-link {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 0.625rem;
+    background-size: cover;
+}
+
+.lines {
+    width: 1.5rem;
+    height: 0.1rem;
+    background-color: #898989;
+    rotate: 90deg;
+}
+
+.hero {
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.2)),
+        url('../images/bg.png');
+    background-size: cover;
+    background-position: top left;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.hero__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero__image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.hero__content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 3.125rem 1.25rem;
+}
+
+.hero__subtitle {
+    color: #FFF;
+    font-size: 1.625rem;
+    line-height: 1.75rem;
+    text-align: left;
+}
+
+.img-wawe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 48.5%;
+    opacity: 0.4;
+}
+
+/* MAIN */
+
+.gallery {
+    position: relative;
+    text-align: center;
+    max-width: 100%;
+    margin-bottom: 3.5rem;
+}
+
+.gallery__slider {
+    display: flex;
+    overflow: hidden;
+    padding-left: 15.625rem;
+    padding-right: 15.625rem;
+    margin: 0;
+}
+
+.gallery__slide {
+    max-width: 8.2%;
+    transition: transform 1s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery__image {
+    max-width: 46.875rem;
+    object-fit: cover;
+}
+
+.gallery__description,
+.gallery__price,
+.holst__description,
+.holst__price {
+    margin: 0.625rem 0;
+}
+
+.gallery__prev,
+.gallery__next {
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50%);
+    border: none;
+    padding: 0.313rem;
+    cursor: pointer;
+    font-size: 1.875rem;
+    margin-bottom: 1rem;
+}
+
+.gallery__prev {
+    left: 0.625rem;
+}
+
+.gallery__next {
+    right: 0.625rem;
+}
+
+.holst {
+    margin-bottom: 3.5rem;
+}
+
+.holst__title--center {
+    text-align: center;
+}
+
+.holst__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.subtitle {
+    color: #b9b9b9;
+}
+
+.philosophy__title--transform {
+    z-index: 3;
+}
+
+.philosophy__items {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.philosophy-title {
+    -webkit-text-stroke: 2px rgb(0, 0, 0);
+    color: #fff;
+    font-size: clamp(1rem, 0.638rem + 1.81vw, 2.813rem);
+    font-weight: 600;
+    line-height: clamp(1rem, 0.638rem + 1.81vw, 2.813rem);
+    margin-bottom: clamp(1rem, 0.92rem + 0.4vw, 1.4rem);
+}
+
+.philosophy__text {
+    color: #7C6E6E;
+    width: clamp(9.2rem, 0.028rem + 45.86vw, 58.063rem);
+}
+
+.philosophy-img {
+    border-radius: 50%;
+    transform: translateY(-40%);
+    z-index: -3;
+}
+
+.nft {
+    background: linear-gradient(rgba(56, 56, 56, 0.8), rgba(255, 138, 138, 0.5)), url('../images/gallery17.jpg');
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    margin-top: -15rem;
+    padding-top: 12.25rem;
+}
+
+.nft__title--color {
+    color: #ffffff;
+    font-family: "Noto Serif", sans-serif;
+    font-size: 11.5rem;
+    line-height: 13.125rem;
+    text-transform: uppercase;
+}
+
+.nft__text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.5rem;
+    letter-spacing: normal;
+    width: 80rem;
+    display: inline-block;
+    vertical-align: calc(1rem);
+}
+
+.nft__heading {
+    font-size: 1rem;
+    padding-left: 1rem;
+}
+
+.nft__pages {
+    display: flex;
+    flex-direction: column;
+}
+
+.nft__page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 12rem;
+    height: 12rem;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-bottom: 4rem;
+}
+
+.nft__block {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.nft__block1 {}
+
+.nft__descript {
+    width: 90rem;
+    text-align: center;
+    padding: 3rem 0 0 3rem;
+    color: #ffffff;
+}
+
+.page-img {
+    width: 2rem;
+}
+
+.exhibitions__title {
+    text-align: center;
+}
+
+.exhibitions__slider {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2.25rem;
+}
+
+.exhibitions__blocks {
+    display: flex;
+    transition: transform 0.5s ease;
+
+}
+
+.exhibitions__block {
+    min-width: 50%;
+    box-sizing: border-box;
+    padding: 1.3rem;
+}
+
+.exhibitions-img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #000;
+    margin-bottom: 1rem;
+}
+
+.exhibitions__subtitle {
+    color: #000;
+    font-size: clamp(0.9rem, 0.748rem + 0.76vw, 1.663rem);
+    font-weight: 600;
+    line-height: clamp(0.75rem, 0.502rem + 1.49vw, 2.188rem);
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+    flex: 1;
+}
+
+.exhibitions__subtext {
+    color: #000;
+    font-size: clamp(0.7rem, 0.527rem + 0.86vw, 1.563rem);
+    font-style: normal;
+    font-weight: 400;
+    line-height: clamp(0.75rem, 0.502rem + 1.49vw, 2.188rem);
+    margin-bottom: 1rem;
+}
+
+a.exhibitions__links {
+    color: #4137D0;
+    font-weight: 600;
+    line-height: clamp(0.5rem, 0.225rem + 1.38vw, 1.875rem);
+     text-transform: uppercase;
+}
+
+.exhibitions__dots {
+    text-align: center;
+    margin-top: 0.625rem;
+}
+
+.exhibitions__dot {
+    display: inline-block;
+    width: 0.625rem;
+    height: 0.625rem;
+    margin: 0 0.313rem;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.exhibitions__dot.active {
+    background-color: #4137D0;
+}
+
+.exhibitions__next,
+.exhibitions__prev {
+    font-size: 2rem;
+}
+
+.icon-shares {
+    width: 2.695rem;
+    height: 2.285rem;
+}
+
+.icon-fk,
+.icon-im,
+.icon-tk,
+.icon-ye {
+    width: 3.425rem;
+    height: 3.425rem;
+    margin-top: 0.5rem;
+    cursor: pointer;
+}
+
+.social__block {
+    display: flex;
+    align-items: center;
+    background-color: #4137D0;
+    width: 41.0625rem;
+    height: 5rem;
+    justify-content: space-between;
+    padding: 1rem 0 1rem 0;
+    border-radius: 2.5rem;
+    margin-bottom: 5.31rem;
+}
+
+.social__share {
+    width: 4.375rem;
+    height: 4.375rem;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 1rem 0.5rem;
+}
+
+.social__links {
+    color: #FFF;
+    text-align: center;
+    line-height: 1rem;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+    cursor: pointer;
+}
+
+.social__icon {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 0.625rem;
+}
+
+hr {
+    max-width: 100%;
+    height: 0.01rem;
+    background-color: #a7a7a7;
+    margin-bottom: 0.5rem;
+}
